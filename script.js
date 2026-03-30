@@ -33,6 +33,44 @@ faqButtons.forEach((button) => {
 });
 
 /*
+  Experience carousel behavior.
+*/
+let currentSlide = 0;
+const slides = document.querySelectorAll(".carousel-slide");
+
+function showSlide(index) {
+  if (!slides.length) {
+    return;
+  }
+
+  slides.forEach((slide) => slide.classList.remove("active"));
+  slides[index].classList.add("active");
+}
+
+function nextSlide() {
+  if (!slides.length) {
+    return;
+  }
+
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+function prevSlide() {
+  if (!slides.length) {
+    return;
+  }
+
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+
+showSlide(currentSlide);
+
+window.nextSlide = nextSlide;
+window.prevSlide = prevSlide;
+
+/*
   Simple reveal-on-scroll effect for sections.
   Remove this if you want a fully static page.
 */
