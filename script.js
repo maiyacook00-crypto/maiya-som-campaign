@@ -1,38 +1,4 @@
 /*
-  FAQ accordion behavior.
-  Edit FAQ entries in index.html. This script handles the open/close interaction.
-*/
-const faqButtons = document.querySelectorAll(".faq-question");
-
-faqButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const item = button.closest(".faq-item");
-
-    if (!item) {
-      return;
-    }
-
-    const isOpen = item.classList.contains("open");
-
-    faqButtons.forEach((otherButton) => {
-      const otherItem = otherButton.closest(".faq-item");
-
-      if (!otherItem) {
-        return;
-      }
-
-      otherItem.classList.remove("open");
-      otherButton.setAttribute("aria-expanded", "false");
-    });
-
-    if (!isOpen) {
-      item.classList.add("open");
-      button.setAttribute("aria-expanded", "true");
-    }
-  });
-});
-
-/*
   Experience carousel behavior.
 */
 let currentSlide = 0;
