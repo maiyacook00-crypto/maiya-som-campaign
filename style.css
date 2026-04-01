@@ -397,6 +397,7 @@ h3 {
 
 .priorities-list {
   max-width: 820px;
+  margin: 0 auto;
 }
 
 .priorities-list li {
@@ -445,6 +446,7 @@ h3 {
 
 .text-section {
   max-width: 760px;
+  margin: 0 auto;
 }
 
 .text-section p + p {
