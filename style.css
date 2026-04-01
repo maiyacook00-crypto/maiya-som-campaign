@@ -138,6 +138,8 @@ h3 {
 
 .site-nav a {
   position: relative;
+  display: inline-flex;
+  align-items: center;
   font-size: 0.95rem;
   font-weight: 600;
 }
@@ -146,9 +148,15 @@ h3 {
   content: "|";
   color: #c9a646;
   margin-right: 0.8rem;
+  margin-right: 0.8rem;
 }
 
-.site-nav a::after {
+.nav-label {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-label::after {
   content: "";
   position: absolute;
   left: 0;
@@ -161,8 +169,8 @@ h3 {
   transition: transform 180ms ease;
 }
 
-.site-nav a:hover::after,
-.site-nav a.active::after {
+.site-nav a:hover .nav-label::after,
+.site-nav a.active .nav-label::after {
   transform: scaleX(1);
 }
 
