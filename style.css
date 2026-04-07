@@ -251,6 +251,12 @@ h3 {
   margin-top: 2rem;
 }
 
+.vote-note {
+  margin-top: 0.85rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
